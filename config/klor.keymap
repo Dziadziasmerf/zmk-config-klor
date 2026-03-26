@@ -34,11 +34,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll_encoder: scroll_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        };
     };
 
     combos {
@@ -79,7 +74,7 @@
                                        &lt 6 ESCAPE     &lt 2 SPACE         &lt 4 TAB  &trans  &trans  &lt 5 ENTER  &lt 1 BACKSPACE      &lt 3 SQT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         SYM {
@@ -105,7 +100,7 @@
                                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE   &trans  &trans  &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         NUM {
@@ -131,7 +126,7 @@
                                    &trans         &trans            &trans  &trans  &trans  &kp PERIOD        &kp N0        &kp MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         MEDIA {
@@ -143,7 +138,7 @@
                                   &kp K_MUTE       &kp C_PLAY_PAUSE  &kp C_STOP  &trans  &trans  &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         MOUSE {
@@ -154,7 +149,7 @@
                               &trans    &trans    &trans  &trans  &trans  &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         FUN {
@@ -165,7 +160,7 @@
                          &trans  &kp SPACE  &kp TAB  &trans  &trans  &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
 
         NAV {
@@ -176,7 +171,7 @@
                               &trans    &trans    &trans  &trans  &trans  &kp ENTER   &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP SCRL_DOWN>;
         };
     };
 };
