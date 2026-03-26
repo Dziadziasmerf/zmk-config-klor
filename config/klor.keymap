@@ -35,6 +35,11 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        };
     };
 
     combos {
@@ -75,7 +80,7 @@
                                        &lt 6 ESCAPE     &lt 2 SPACE         &lt 4 TAB  &trans  &trans  &lt 5 ENTER  &lt 1 BACKSPACE      &lt 3 SQT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_encoder>;
         };
 
         SYM {
