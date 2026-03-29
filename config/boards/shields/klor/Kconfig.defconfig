@@ -18,10 +18,3 @@ if SHIELD_KLOR_DONGLE
          default 6
 
 endif # DONGLE
-
-if SHIELD_KLOR_DONGLE || SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
-
-    config ZMk_SPLIT
-        default y
-
-endif # LEFT RIGHT DONGLE
