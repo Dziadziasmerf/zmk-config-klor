@@ -24,4 +24,4 @@ include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
   - board: seeeduino_xiao_ble
-    shield: klor_dongle prospector_adapter
+    shield: klor_dongle prospector_adapter -DCONFIG_ZMK_SPLIT_BLE_PERIPHERAL_COUNT=2
