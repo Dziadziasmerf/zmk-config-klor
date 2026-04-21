@@ -32,6 +32,16 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
 
+# Allow enough simultaneous connections for:
+# - 2 split peripherals (halves)
+# - optional BLE host connection (when not using USB output)
+config BT_MAX_CONN
+    default 4
+
+# Allow pairing slots for halves + a few host profiles.
+config BT_MAX_PAIRED
+    default 6
+
 config ZMK_USB
     default y
 
